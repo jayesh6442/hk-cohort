@@ -30,3 +30,29 @@
 
 // we have this kind of the data type in the js language
 
+// let will let you change the data value
+
+// on the other hand the const will never let you change the data value
+
+// we also have var that is not used in the es6 because of the scope thing
+
+// if else alows us the make the code run on the bassis of the condition
+
+// let person = false;
+// if (person) {
+//   console.log("we are in the if ");
+// } else {
+//   console.log("we are in the else case");
+// }
+
+// this is for loop for the basic
+// let ans = 0;
+// for (let i = 1; i < 101; i++) {
+//   ans += i;
+// }
+// console.log(ans);
+
+// what we lerned so far let,var,const ,if ,else, for
+
+// and here we go again
+
