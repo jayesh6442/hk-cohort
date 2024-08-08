@@ -40,6 +40,3 @@ const fs = require("fs");
 // console.log(a);
 // jayeshpr().then(onDone).catch(onDone);
 // this is the best way to do the asyc function
-
-
-
