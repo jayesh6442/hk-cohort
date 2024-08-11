@@ -1,0 +1,16 @@
+dom is refered by the document object model 
+
+we can manipulate the html using the dom
+
+it represetnd the web page using the series
+
+
+DOM is tree
+
+
+
+when a web browser parse an htm document it build the dom tree and then use it to display the document 
+
+table
+tbody
+`
