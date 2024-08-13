@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <script>
+    // console.log("we are in the script");
+    function addTodo() {
+      const todos = document.querySelector("#todos");
+      const title = document.querySelector("#title").value;
+      const description = document.querySelector("#description").value;
+      const outerDiv = document.createElement("div");
+      const titleDiv = document.createElement("div");
+      const descriptionDiv = document.createElement("div");
+      const markAsDone = document.createElement("button");
+      markAsDone.innerText = "mark as done";
+
+      titleDiv.innerHTML = title;
+      descriptionDiv.innerHTML = description;
+      outerDiv.appendChild(titleDiv);
+      outerDiv.appendChild(descriptionDiv);
+      outerDiv.appendChild(markAsDone);
+      todos.appendChild(outerDiv);
+      // const subtodo = document.createElement("div");
+      // subtodo.appendChild(title);
+      // subtodo.appendChild(description);
+      // todos.appendChild(subtodo);
+      // todos.innerHTML += `<div>
+      //   <div>${title}<div/>
+      //     <div>${description}<div/>
+      //     <button>mark as done<button/>
+      //   <div/>`;
+    }
+  </script>
+  <body>
+    <input type="text" name="title" id="title" placeholder="title" />
+    <input
+      type="text"
+      name="description"
+      id="description"
+      placeholder="description"
+    />
+    <button onclick="addTodo()">Add Todo</button>
+    <div id="todos"></div>
+  </body>
+</html>
