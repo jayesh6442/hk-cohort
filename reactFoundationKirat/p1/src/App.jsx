@@ -17,7 +17,7 @@ function App() {
       </button>
       <button
         onClick={() => {
-          setName(name ? "" : "sarvaiya");
+          setName(name ? "" : "sarvaiya ");
         }}
       >
         change
