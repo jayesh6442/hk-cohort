@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+      }
+      .container {
+        background-color: lightblue;
+        padding: 3rem 3rem;
+      }
+    </style>
+  </head>
+  <script>
+    function populateDiv() {
+      const element = document.getElementById("onetwo");
+      element.innerText = " jayesh";
+    }
+    populateDiv();
+  </script>
+  <body>
+    <div class="container">
+      <h1 style="font-size: 1.5rem; color: aquamarine">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+        voluptatibus eligendi, expedita facilis incidunt consectetur neque
+        mollitia vero earum saepe eos natus, deserunt quasi itaque a laborum
+        repellendus amet provident.
+        <h1 id="onetwo"></h1>
+      </h1>
+    </div>
+    <h2></h2>
+  </body>
+</html>
