@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanye</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: url("https://cdn.britannica.com/00/236500-050-06E93F4F/Kanye-West-2018.jpg");
+        object-fit: contain;
+        object-position: center;
+      }
+      .container {
+        height: 30rem;
+        width: 80rem;
+        background-color: #54419296;
+        /* background: transparent; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 3rem;
+        font-size: 1rem;
+        border-radius: 2rem;
+        text-align: center;
+      }
+      button {
+        background-color: #3a1078;
+        border: none;
+        width: 12rem;
+        height: 6rem;
+        font-size: 2rem;
+        margin-top: 3rem;
+        color: white;
+        border-radius: 2rem;
+      }
+    </style>
+  </head>
+  <script>
+    async function getKanye() {
+      const quote = document.querySelector("#quote");
+      const res = await fetch("https://api.kanye.rest");
+      const finalData = await res.json();
+      quote.innerHTML = finalData.quote;
+    }
+  </script>
+  <body>
+    <div class="container">
+      <h1 id="quote"></h1>
+    </div>
+    <div id="btn">
+      <button onclick="getKanye()">Get Quote</button>
+    </div>
+  </body>
+</html>

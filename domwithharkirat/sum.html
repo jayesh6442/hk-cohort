@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <script>
+      // once should be called after the call this function we have to wait for 1 sec for the calling the sum function
+      // let counter;
+      // function debouncePopulateDiv() {
+      //   clearTimeout(counter);
+      //   counter = setTimeout(() => {
+      //     sum();
+      //   }, 2000);
+      // }
+      // this is debouncing in js
+
+      let counter;
+      function debouncePopulateDiv() {
+        clearTimeout(counter);
+        counter = setTimeout(() => {
+          sum();
+        }, 2000);
+      }
+      async function sum() {
+        const a = document.querySelector("#one").value;
+        const b = document.querySelector("#two").value;
+        const result = document.querySelector("#result");
+        const sum = await fetch(
+          `https://sum-server.100xdevs.com/sum?a=${a}&b=${b}`
+        );
+        const finalSum = await sum.text();
+        result.innerHTML = finalSum;
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      oninput="debouncePopulateDiv()"
+      type="text"
+      id="one"
+      placeholder="first num"
+    /><br /><br /><br />
+    <input
+      oninput="debouncePopulateDiv()"
+      type="text"
+      id="two"
+      placeholder="second num"
+    /><br /><br /><br />
+    <!-- <button onclick="sum()">sum</button><br /><br /><br /> -->
+    <h1 id="result"></h1>
+  </body>
+</html>
