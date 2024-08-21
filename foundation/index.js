@@ -228,4 +228,3 @@
 //   console.log(data);
 // }
 // sum(5, 4, printValue);
-
