@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 function App() {
-  const [todos, settodos] = useState([]);
+  const [todos, settodos] = useState({});
   // async function getData() {
   //   const res = await fetch("https://sum-server.100xdevs.com/todos");
   //   const data = await res.json();
@@ -19,6 +19,13 @@ function App() {
   //   }, 10000);
   // }, []);
 
+  useEffect(() => {
+    fetch("https://sum-server.100xdevs.com/todo?id=1").then(async (res) => {
+      const data = await res.json();
+      console.log(data);
+      settodos(data.todo);
+    });
+  }, []);
   return (
     <>
       {todos.map((todo, index) => (
