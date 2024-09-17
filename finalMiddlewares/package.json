@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
+    "finalmiddlewares": "file:",
     "jsonwebtoken": "^9.0.2"
   }
 }

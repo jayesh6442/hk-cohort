@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "authentication": "file:",
     "express": "^4.19.2",
     "zod": "^3.23.8"
   }
